@@ -5,9 +5,7 @@ from collections import defaultdict
 # Esta classe representa um gráfico direcionado usando a 
 # representação da lista de adjacências
 class Graph:
-  
     def __init__(self,vertices):
-  
         # Numeros de vertices
         self.V = vertices
   
@@ -21,7 +19,6 @@ class Graph:
     # Uma função para realizar uma pesquisa limitada 
     # em profundidade a partir de uma determinada fonte 'src'
     def DLS(self,src,target,maxDepth):
-  
         if src == target : return True
   
         # Se atingir a profundidade máxima, retorna false.

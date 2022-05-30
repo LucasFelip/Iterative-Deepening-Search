@@ -138,8 +138,8 @@ class BidirectionalSearch:
             # Se existir um vértice de interseção, o caminho 
             # da origem ao destino existe
             if intersecting_node != -1:
-                print(f"Path exists between {src} and {dest}")
-                print(f"Intersection at : {intersecting_node}")
+                print(f" \nExiste um caminho entre {src} e {dest}")
+                print(f"Cruzamento em : {intersecting_node}")
                 self.print_path(intersecting_node,
                                 src, dest)
                 exit(0)
@@ -175,4 +175,4 @@ if __name__ == '__main__':
     out = graph.bidirectional_search(src, dest)
      
     if out == -1:
-        print(f"Path does not exist between {src} and {dest}")
+        print(f"O caminho não existe entre {src} e {dest}")

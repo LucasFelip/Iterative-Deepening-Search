@@ -1,3 +1,4 @@
+# Busca de aprofundamento iterativo (IDS – Iterative Deepening Search);
 # Programa Python para imprimir a travessia DFS 
 # de um determinado grafo
 from collections import defaultdict
@@ -53,8 +54,8 @@ g.addEdge(2, 6)
 target = 6; maxDepth = 3; src = 0
   
 if g.IDDFS(src, target, maxDepth) == True:
-    print ("O alvo é alcançável a partir da origem " +
-    "dentro da profundidade máxima")
+    print ("\nO alvo é alcançável a partir da origem " +
+    "dentro da profundidade máxima\n")
 else :
-    print ("O destino NÃO é alcançável a partir da origem" + 
-    "dentro da profundidade máxima")
+    print ("\nO destino NÃO é alcançável a partir da origem" + 
+    "dentro da profundidade máxima\n")

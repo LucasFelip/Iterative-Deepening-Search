@@ -7,6 +7,7 @@ _city_info = None
 # Explored collection
 _explored = []
 
+
 # Node data structure
 class Node:
     def __init__(self, state, parent, action, path_cost):
@@ -24,6 +25,7 @@ def main():
         src_city = input('input src city\n')
         dst_city = input('input dst city\n')
         limit = int(input('input limit\n'))
+        
         result = depth_limited_search(src_city, dst_city, limit)
         if result == "failure" or result == "cutoff":
             print('from city: %s to city %s search failure'% (src_city, dst_city))

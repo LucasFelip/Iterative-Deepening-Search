@@ -1,3 +1,5 @@
+# Breadth-First Search - Busca em profundidade 
+
 graph = {
   '5' : ['3','7'],
   '3' : ['2', '4'],

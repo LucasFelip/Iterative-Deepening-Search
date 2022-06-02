@@ -1,3 +1,4 @@
+# Uniform-Cost Search - Busca de Custo Uniforme
 # returns the minimum cost in a vector( if
 # there are multiple goal states)
 def uniform_cost_search(goal, start):

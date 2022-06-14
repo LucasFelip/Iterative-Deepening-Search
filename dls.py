@@ -1,6 +1,8 @@
 import pandas as pd
 from pandas import Series, DataFrame
 
+#Busca em Profundidade Limitada
+
 # City information: city1 city2 path_cost
 _city_info = None
 
@@ -25,7 +27,6 @@ def main():
         src_city = input('input src city\n')
         dst_city = input('input dst city\n')
         limit = int(input('input limit\n'))
-        
         result = depth_limited_search(src_city, dst_city, limit)
         if result == "failure" or result == "cutoff":
             print('from city: %s to city %s search failure'% (src_city, dst_city))
@@ -33,14 +34,14 @@ def main():
             print('from city: %s to city %s search success'% (src_city, dst_city))
             path = []
             while True:
-                path.append(result.state)
+                path.append(result.state) #carrega a lista com os resultados
                 if result.parent is None:
                     break
                 result = result.parent
             size = len(path)
             for i in range(size):
                 if i <size-1:
-                    print('%s->'% path.pop(), end='')
+                    print('%s->'% path.pop(), end='') #remove o item no índice fornecido da lista e retorna o item removido.
                 else:
                     print(path.pop())
 
@@ -106,6 +107,8 @@ def recursive_dls(node, dst_state, limit):
         return "cutoff"
     else:
         cutoff_occurred = False
+        
+        #faz a iteração no grafo. Se a cidade for igual a nó, ele passa pra próxima cidade. Se já tiver sido explorado, continua
         
         # Traverse child nodes
         for i in range(len(_city_info)):
